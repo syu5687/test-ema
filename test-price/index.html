@@ -15,115 +15,313 @@
 	<script src="https://business.form-mailer.jp/formfiles/js/embed.js"></script>
 	<script type="text/javascript" src="./_assets/js/script.js"></script>
 </head>
+<style>
+body{
+	background: #eee;
+}
+h2{
+	font-size: 1.5rem;
+}
+  .error-msg {
+	color: red;
+	font-size: 0.9em;
+  }
+  .hissu{
+	  display: inline;
+	  background: #E35C33;
+	  color: #fff;
+	  padding: 1px 5px 2px;
+	  font-size: 0.8rem;
+	  border-radius: 16px;
+	  margin-left:0.5rem;
+  }
+  .form{
+	  width: 80%;
+	  margin: 15px auto;
+	  background: #fff;
+	  padding: 20px;
+	  border-radius: 3px;
+  }
+  .form form{
+		width: 100%;
+		margin: 0 auto;
+		
+	}
+	.form input,
+	.form select,
+	.form textarea{
+		margin: 0 auto 8px;
+		background: #eee;
+		border: 1px solid #aaa;
+		padding: 7px;
+	}
+	.form input[type="text"],
+	.form textarea{
+		width: 100%;
+	}
+	.form input[name="field_5224912"],
+	.form input[name="field_5176190_sei"],
+	.form input[name="field_5176190_mei"]{
+		width: 70%;
+	}
+  .formItem{
+	  width:100%;
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  flex-direction: row;
+  }
+  .itemText,
+  .itemContent{
+	  display: block;
+	  font-size: 1rem;
+	  border-bottom:1px solid #999;
+  }
+  .itemText{
+	  width: 30%;
+	  align-content: center;
+	}
+	.itemContent{
+		width: 70%;
+		text-align: left;
+		padding:10px 0 0 10px;
+	}
+	.form input[type="submit"]{
+		width: 70%;
+		margin: 15px auto;
+		padding: 15px 0;
+		font-size: 1.2rem;
+		background: orange;
+		border-radius: 5px;
+		border:1px solid brown;
+	}
+	@media (max-width:768px) {
+		.form{
+			width:90%;
+		}
+		.formItem{
+			flex-direction: column;
+			margin: 10px auto 15px;
+		}
+		.itemText,
+		.itemContent{
+			width:100%;
+			
+		}
+		.itemText{
+			border-bottom:0;
+			text-align: left;
+			padding: 10px 0;
+		}
+		.itemContent{
+			padding: 0 10px;
+		}
+	}
+
+
+</style>
 
 <body>
 <div class="first"><img src="./_assets/img/webp/samp.webp" width="100%" height="auto" alt=""></div>
 <div class="form">
+	<h2>予約フォーム</h2>
 	<form action="https://business.form-mailer.jp/fm/service/Forms/complete" method="post" name="form1" ENCTYPE="multipart/form-data" accept-charset="UTF-8">
-  <input type="hidden" name="key" value="49955221305550">
-  *は必須項目です
-  <!-- text -->
-  <p>会員・非会員</p>
-  <p><input name="field_5224892" type="text" value="" size="30"   readonly></p>
+	  <input type="hidden" name="key" value="49955221305550">
+	  <!-- dropdown -->
+	  <span class="formItem">
+		<p class="itemText">
+		会員・非会員<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		<select name="field_5225164">
+		  <option value="">------</option>
+		  <option value="0" >会員</option>
+		  <option value="1" >非会員</option>
+		</select>
+	  </p>
+	  </span>
+	
+	  <!-- hidden -->
+	  <input name="field_5225178" type="hidden" value=""  >
+	
+	  <!-- dropdown -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*個数<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		<select name="field_5225179">
+		  <option value="">------</option>
+		  <option value="0" >1</option>
+		  <option value="1" >2</option>
+		  <option value="2" >3</option>
+		  <option value="3" >4</option>
+		  <option value="4" >5</option>
+		  <option value="5" >6</option>
+		  <option value="6" >7</option>
+		  <option value="7" >8</option>
+		  <option value="8" >9</option>
+		  <option value="9" >10</option>
+		  <option value="10" >11</option>
+		  <option value="11" >12</option>
+		  <option value="12" >13</option>
+		  <option value="13" >14</option>
+		  <option value="14" >15</option>
+		</select>
+	  </p>
+	  </span>
+	
+	  <!-- hidden -->
+	  <input name="field_5225180" type="hidden" value=""  >
+	
+	  <!-- dropdown -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*受け取り方法<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		<select name="field_5225181">
+		  <option value="">------</option>
+		  <option value="0" >店舗受け取り</option>
+		  <option value="1" >郵送（+2000円）</option>
+		</select>
+	  </p>
+	  </span>
+	
+	  <!-- hidden -->
+	  <input name="field_5225182" type="hidden" value=""  >
+	
+	  <!-- text -->
+	  <span class="formItem">
+	  <p class="itemText">
+		合計金額
+	  </p>
+	  <p class="itemContent">
+		<input name="field_5224912" type="text" value="" size="6"   readonly>
+		円
+	  </p>
+	  </span>
+	
+	  <!-- name -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*名前<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		姓 <input name="field_5176190_sei" type="text" placeholder="姓"><br>
+		名 <input name="field_5176190_mei" type="text" placeholder="名">
+	  </p>
+	  </span>
+	
+	  <!-- address -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*住所<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		〒<input name="field_5180978_zip" type="text" maxlength="7"><br>
+		都道府県<br>
+		<select name="field_5180978_pref">
+		  <option value="">----</option>
+		  <option value="北海道">北海道</option>
+		  <option value="青森県">青森県</option>
+		  <option value="岩手県">岩手県</option>
+		  <option value="宮城県">宮城県</option>
+		  <option value="秋田県">秋田県</option>
+		  <option value="山形県">山形県</option>
+		  <option value="福島県">福島県</option>
+		  <option value="茨城県">茨城県</option>
+		  <option value="栃木県">栃木県</option>
+		  <option value="群馬県">群馬県</option>
+		  <option value="埼玉県">埼玉県</option>
+		  <option value="千葉県">千葉県</option>
+		  <option value="東京都">東京都</option>
+		  <option value="神奈川県">神奈川県</option>
+		  <option value="新潟県">新潟県</option>
+		  <option value="富山県">富山県</option>
+		  <option value="石川県">石川県</option>
+		  <option value="福井県">福井県</option>
+		  <option value="山梨県">山梨県</option>
+		  <option value="長野県">長野県</option>
+		  <option value="岐阜県">岐阜県</option>
+		  <option value="静岡県">静岡県</option>
+		  <option value="愛知県">愛知県</option>
+		  <option value="三重県">三重県</option>
+		  <option value="滋賀県">滋賀県</option>
+		  <option value="京都府">京都府</option>
+		  <option value="大阪府">大阪府</option>
+		  <option value="兵庫県">兵庫県</option>
+		  <option value="奈良県">奈良県</option>
+		  <option value="和歌山県">和歌山県</option>
+		  <option value="鳥取県">鳥取県</option>
+		  <option value="島根県">島根県</option>
+		  <option value="岡山県">岡山県</option>
+		  <option value="広島県">広島県</option>
+		  <option value="山口県">山口県</option>
+		  <option value="徳島県">徳島県</option>
+		  <option value="香川県">香川県</option>
+		  <option value="愛媛県">愛媛県</option>
+		  <option value="高知県">高知県</option>
+		  <option value="福岡県">福岡県</option>
+		  <option value="佐賀県">佐賀県</option>
+		  <option value="長崎県">長崎県</option>
+		  <option value="熊本県">熊本県</option>
+		  <option value="大分県">大分県</option>
+		  <option value="宮崎県">宮崎県</option>
+		  <option value="鹿児島県">鹿児島県</option>
+		  <option value="沖縄県">沖縄県</option>
+		  <option value="その他">その他</option>
+		</select><br>
+		市区町村<br>
+		<input name="field_5180978_city" type="text"><br>
+		番地<br>
+		<input name="field_5180978_block" type="text"><br>
+		マンション・ビル名<br>
+		<input name="field_5180978_building" type="text">
+	  </p>
+	  </span>
+	
+	  <!-- email -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*メールアドレス<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		<input name="field_5176191" type="text" size="30" placeholder="info@example.com">
+	  </p>
+	  </span>
+	
+	  <!-- phone -->
+	  <span class="formItem">
+	  <p class="itemText">
+		*電話番号<span class="hissu">必須</span>
+	  </p>
+	  <p class="itemContent">
+		<input name="field_5176195" type="text" placeholder="090-0000-0000">
+	  </p>
+	  </span>
+	
+	  <!-- textarea -->
+	  <span class="formItem">
+	  <p class="itemText">
+		その他、ご質問・ご要望など
+	  </p>
+	  <p class="itemContent">
+		<textarea name="field_5176218" cols="30" rows="5"   ></textarea>
+	  </p>
+	  </span>
+	
+	
+	
+	  <p>
+		<input name="submit" type="submit" value="送信する">
+	  </p>
+	
+	
+	  <input type="hidden" name="code" value="utf8">
+	</form>
 
-  <!-- text -->
-  <p>おせち個数</p>
-  <p><input name="field_5224911" type="text" value="" size="3"   readonly>個</p>
 
-  <!-- text -->
-  <p>受け取り方法</p>
-  <p><input name="field_5224896" type="text" value="" size="30"   readonly></p>
-
-  <!-- text -->
-  <p>合計金額</p>
-  <p><input name="field_5224912" type="text" value="" size="6"   readonly>円</p>
-
-  <!-- name -->
-  <p>*名前</p>
-  <p>
-	姓 <input name="field_5176190_sei" type="text" placeholder="姓">
-	名 <input name="field_5176190_mei" type="text" placeholder="名">
-  </p>
-
-  <!-- address -->
-  <p>*住所</p>
-  <p>
-	〒<input name="field_5180978_zip" type="text" maxlength="7"><br>
-	都道府県<br>
-	<select name="field_5180978_pref">
-	  <option value="">----</option>
-	  <option value="北海道">北海道</option>
-	  <option value="青森県">青森県</option>
-	  <option value="岩手県">岩手県</option>
-	  <option value="宮城県">宮城県</option>
-	  <option value="秋田県">秋田県</option>
-	  <option value="山形県">山形県</option>
-	  <option value="福島県">福島県</option>
-	  <option value="茨城県">茨城県</option>
-	  <option value="栃木県">栃木県</option>
-	  <option value="群馬県">群馬県</option>
-	  <option value="埼玉県">埼玉県</option>
-	  <option value="千葉県">千葉県</option>
-	  <option value="東京都">東京都</option>
-	  <option value="神奈川県">神奈川県</option>
-	  <option value="新潟県">新潟県</option>
-	  <option value="富山県">富山県</option>
-	  <option value="石川県">石川県</option>
-	  <option value="福井県">福井県</option>
-	  <option value="山梨県">山梨県</option>
-	  <option value="長野県">長野県</option>
-	  <option value="岐阜県">岐阜県</option>
-	  <option value="静岡県">静岡県</option>
-	  <option value="愛知県">愛知県</option>
-	  <option value="三重県">三重県</option>
-	  <option value="滋賀県">滋賀県</option>
-	  <option value="京都府">京都府</option>
-	  <option value="大阪府">大阪府</option>
-	  <option value="兵庫県">兵庫県</option>
-	  <option value="奈良県">奈良県</option>
-	  <option value="和歌山県">和歌山県</option>
-	  <option value="鳥取県">鳥取県</option>
-	  <option value="島根県">島根県</option>
-	  <option value="岡山県">岡山県</option>
-	  <option value="広島県">広島県</option>
-	  <option value="山口県">山口県</option>
-	  <option value="徳島県">徳島県</option>
-	  <option value="香川県">香川県</option>
-	  <option value="愛媛県">愛媛県</option>
-	  <option value="高知県">高知県</option>
-	  <option value="福岡県">福岡県</option>
-	  <option value="佐賀県">佐賀県</option>
-	  <option value="長崎県">長崎県</option>
-	  <option value="熊本県">熊本県</option>
-	  <option value="大分県">大分県</option>
-	  <option value="宮崎県">宮崎県</option>
-	  <option value="鹿児島県">鹿児島県</option>
-	  <option value="沖縄県">沖縄県</option>
-	  <option value="その他">その他</option>
-	</select><br>
-	市区町村<br>
-	<input name="field_5180978_city" type="text"><br>
-	番地<br>
-	<input name="field_5180978_block" type="text"><br>
-	マンション・ビル名<br>
-	<input name="field_5180978_building" type="text">
-  </p>
-
-  <!-- email -->
-  <p>*メールアドレス</p>
-  <p><input name="field_5176191" type="text" size="30" placeholder="info@example.com"></p>
-
-  <!-- phone -->
-  <p>*電話番号</p>
-  <p><input name="field_5176195" type="text" placeholder="090-0000-0000"></p>
-
-  <!-- textarea -->
-  <p>その他、ご質問・ご要望など</p>
-  <p><textarea name="field_5176218" cols="30" rows="5"   ></textarea></p>
-  
-  <p><input name="submit" type="submit" value="送信する"></p>
-  <input type="hidden" name="code" value="utf8">
-</form>
 
 </div>
 </body>
