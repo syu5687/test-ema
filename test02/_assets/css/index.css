@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/***************************************************************************
+*
+* INDEX STYLE
+*
+***************************************************************************/
+#header{
+	width:100%;
+	height: 100px;
+}
+#header .inner {
+	width: 100%;
+	padding: 15px 10px 10px;
+}
+#header .logoText{
+	width: 120px;
+	margin:0 0 0 15px;
+}
+#content,
+#header .logoText a,
+#contact{
+	font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+#header .inner .headInfo{
+	padding-top: 20px;
+}
+
+article{
+	padding-top: 120px;
+}
+
+main .inner{
+	width: 90%;
+	margin:0 auto;
+}
+
+h2{
+	font-size: 2rem;
+	padding-bottom:12px;
+}
+
+main span{
+	display: block;
+	font-size: 1rem;
+	padding: 5px 0;
+	font-weight: bold;
+}
+
+
+
+
+.pc{
+	display: block;
+}
+.sp{
+	display: none;
+}
+/* SP STYLE */
+
+@media(max-width: 1024px) and (min-width: 769px){
+}
+@media (max-width: 768px) {
+}
