@@ -22,8 +22,6 @@ $(document).ready(function(){
 		if ($(this).scrollTop() > hHeader) {
 			if(addClass) {
 				header.addClass('sticky');
-				// header.css("top", -hHeader);
-					// header.animate({top:'0', opacity:'1'}, 500, "swing"); // make effect
 					addClass = false;
 				}
 			} else {
