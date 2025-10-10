@@ -5,52 +5,44 @@
 * INDEX STYLE
 *
 ***************************************************************************/
-#header{
-	width:100%;
-	height: 100px;
-}
-#header .inner {
-	width: 100%;
-	padding: 15px 10px 10px;
-}
-#header .logoText{
-	width: 120px;
-	margin:0 0 0 15px;
-}
-#content,
-#header .logoText a,
-#contact{
+body{
 	font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
-#header .inner .headInfo{
+#header{
+	width:100%;
+	height: 130px;
+}
+#header .headContent{
+	width: 100%;
+	height: 100%;
+	padding: 15px 10px 10px;
+}
+#header .headContent .logoText{
+	display: block;
+	width: 120px;
+	height: 100%;
+	margin:0 0 0 15px;
+}
+#header .headContent .headInfo{
 	padding-top: 20px;
 }
-
-article{
-	padding-top: 120px;
-}
-
 main .inner{
 	width: 90%;
 	margin:0 auto;
 }
-
 h2{
 	font-size: 2rem;
 	padding-bottom:12px;
 }
-
+article{
+	padding-top: 120px;
+}
 main span{
 	display: block;
 	font-size: 1rem;
 	padding: 5px 0;
 	font-weight: bold;
 }
-
-
-
-
 .pc{
 	display: block;
 }
@@ -60,6 +52,30 @@ main span{
 /* SP STYLE */
 
 @media(max-width: 1024px) and (min-width: 769px){
+	.pc{
+		display: none;
+	}
+	.sp{
+		display: block;
+	}
 }
 @media (max-width: 768px) {
+	#header .headInfo {
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		left: 0;
+		top: 0;
+		padding: 80px 3%;
+		height: 100%;
+		background: rgba(255, 255, 255, .9);
+		z-index: 8;
+		overflow-y: auto;
+	}
+	.pc{
+		display: none;
+	}
+	.sp{
+		display: block;
+	}
 }

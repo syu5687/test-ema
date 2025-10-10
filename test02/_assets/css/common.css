@@ -153,10 +153,10 @@ a:hover {
     margin-left: 5px;
     vertical-align: middle;
     transition: all .5s;
-    box-shadow: inset 0 0 0 1px #fff;
+    /* box-shadow: inset 0 0 0 1px #fff; */
 }
 #header .headInfo .headBtn .btnText:hover{
-    box-shadow: inset 0 0 0 2px #fff;
+    /* box-shadow: inset 0 0 0 2px #fff; */
 }
 #header .headInfo .headBtn .btnText a {
     display: block;
@@ -193,7 +193,7 @@ a:hover {
     color: #000;
 }
 #header.sticky .headInfo .headBtn .btnText {
-    box-shadow: inset 0 0 0 1px #000;
+    /* box-shadow: inset 0 0 0 1px #000; */
 }
 #header.sticky .headInfo .headBtn .btnText:hover {
     background: #000;
